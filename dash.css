@@ -53,3 +53,52 @@ body{
 .sidebar_wrap .sidebar ul li:hover a{
     color: #ffffff;
 }
+
+
+/** ** Main content ** **/
+.main_content{
+    width: 100%;
+    margin-left: 200px;
+}
+
+.main_content .header_pan{
+    padding: 25px;
+    background: #9C3587;
+    color: #ffffff;
+    border-bottom: 1px solid #ffb6ff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main_content .header_mssg{
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    line-height: 25px;
+}
+
+.main_content .info{
+    font-size: 15px;
+    text-align: center;
+    color: #000000;
+    line-height: 25px;
+}
+
+#footer{
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6e0086;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center; left: 90px;
+}
+
+.main_content .info div{
+    margin-bottom: 20px;
+}
