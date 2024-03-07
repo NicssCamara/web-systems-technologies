@@ -102,3 +102,21 @@ body{
 .main_content .info div{
     margin-bottom: 20px;
 }
+
+.logoutButton button {
+    width: 100px;
+    height: 35px;
+    font-size: 13px;
+    background-color: #a50042;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    position: relative; left: -165px; top: 295px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logoutButton button:hover {
+    background-color: #83013d;
+  }

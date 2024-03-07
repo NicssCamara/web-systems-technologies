@@ -26,10 +26,25 @@
         </div>
 
         <div class="loginButton">
-            <button type="submit" id="login">Login<i class="fas fa-sign-in-alt"></i></button>
+            <button type="submit" id="login" value="Login" onclick="auth()">Login<i class="fas fa-sign-in-alt"></i></button>
         </div>
-        
     </div>
     </form>
 </body>
+
+<script>
+    function auth(){
+     var username = document.getElementById("username").value;
+     var password = document.getElementById("password").value;
+     if (username == "nikol" && password=="1234"){
+       window.location.assign("Dashboard.html");
+       alert("Login Successful")
+     }
+     else{
+       alert("Invalid Information");
+       return;
+     }
+   }
+</script>
+
 </html>

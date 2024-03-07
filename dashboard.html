@@ -31,5 +31,15 @@
                 <p>&#169 2024 Copyright. All rights reserved.</p>
             </footer>
         </div>
+        <div class="logoutButton">
+            <button type="logout" id="logout">Logout</button>
+        </div>
+        <script>
+            window.onload = function(){
+                document.getElementById("logout").onclick = function(){
+                    location.href = "login.html"
+                };
+            };
+        </script>
 </body>
 </html>
