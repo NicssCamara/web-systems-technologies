@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="login_dash.css">
 </head>
 <body>
-    <form>
+    <form id="login-form">
     <div class="container">
         
         <h1>Login</h1>
@@ -33,19 +33,19 @@
 </body>
 
 <script>
-    function auth() {
+    window.onload = function() {
+      document.getElementById("login-form").addEventListener("submit", function(event) {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
+        event.preventDefault();
 
         if (username === "nikol" && password === "1234") {
-            window.location.href = "dashboard.html";
+          location.href = "Dashboard.html";
         } else {
-            alert("Invalid username or password!");
+          alert("Invalid username or password!");
         }
-        }
-</script>
-
-<form onsubmit="return auth()">
-</form>
+      });
+    };
+  </script>
 
 </html>
