@@ -33,18 +33,19 @@
 </body>
 
 <script>
-    function auth(){
-     var username = document.getElementById("username").value;
-     var password = document.getElementById("password").value;
-     if (username == "nikol" && password=="1234"){
-       window.location.assign("Dashboard.html");
-       alert("Login Successful")
-     }
-     else{
-       alert("Invalid Information");
-       return;
-     }
-   }
+    function auth() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username === "nikol" && password === "1234") {
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Invalid username or password!");
+        }
+        }
 </script>
+
+<form onsubmit="return auth()">
+</form>
 
 </html>
