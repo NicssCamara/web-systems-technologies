@@ -1,0 +1,55 @@
+/*CSS for dashboard*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Open sans", sans-serif;
+}
+
+body{
+    background: #fffaff;
+}
+
+.sidebar_wrap {
+    display: flex;
+    position: relative;
+}
+
+.sidebar_wrap .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #6e0086;
+}
+
+.sidebar_wrap .sidebar h3{
+    color: #ffffff;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 30px;
+}
+
+.sidebar_wrap .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(225, 225, 225, 0.05);
+}
+
+.sidebar_wrap .sidebar ul li a{
+    color: #ffffff;
+    display: block;
+}
+
+.sidebar_wrap .sidebar ul li a .fas{
+    width: 25px;
+}
+
+.sidebar_wrap .sidebar ul li:hover{
+    background: #a19bbe;
+}
+
+.sidebar_wrap .sidebar ul li:hover a{
+    color: #ffffff;
+}
