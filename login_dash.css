@@ -1,0 +1,70 @@
+/* CSS log in*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  min-height: 90vh;
+  margin: 0; 
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffffff;
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  height: 40px;
+  line-height: 40px;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 100%;
+  font-size: inherit;
+  color: inherit;
+}
+
+.container {
+  padding: 30px;
+  background-color: white;
+  width: 400px;
+  box-shadow: 7px 8px 68px 19px rgba(0, 0, 0, 0.228);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.inputContainer {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.loginButton button {
+  width: 110px;
+  height: 40px;
+  font-size: 15px;
+  background-color: #3ca9e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton button:hover {
+  background-color: #2890ce;
+}

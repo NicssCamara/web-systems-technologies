@@ -1,0 +1,122 @@
+/*CSS for dashboard*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Open sans", sans-serif;
+}
+
+body{
+    background: #fffaff;
+}
+
+.sidebar_wrap {
+    display: flex;
+    position: relative;
+}
+
+.sidebar_wrap .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #6e0086;
+}
+
+.sidebar_wrap .sidebar h3{
+    color: #ffffff;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 30px;
+}
+
+.sidebar_wrap .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(225, 225, 225, 0.05);
+}
+
+.sidebar_wrap .sidebar ul li a{
+    color: #ffffff;
+    display: block;
+}
+
+.sidebar_wrap .sidebar ul li a .fas{
+    width: 25px;
+}
+
+.sidebar_wrap .sidebar ul li:hover{
+    background: #a19bbe;
+}
+
+.sidebar_wrap .sidebar ul li:hover a{
+    color: #ffffff;
+}
+
+
+/** ** Main content ** **/
+.main_content{
+    width: 100%;
+    margin-left: 200px;
+}
+
+.main_content .header_pan{
+    padding: 25px;
+    background: #9C3587;
+    color: #ffffff;
+    border-bottom: 1px solid #ffb6ff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main_content .header_mssg{
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    line-height: 25px;
+}
+
+.main_content .info{
+    font-size: 15px;
+    text-align: center;
+    color: #000000;
+    line-height: 25px;
+}
+
+#footer{
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6e0086;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center; left: 90px;
+}
+
+.main_content .info div{
+    margin-bottom: 20px;
+}
+
+.logoutButton button {
+    width: 100px;
+    height: 35px;
+    font-size: 13px;
+    background-color: #a50042;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    position: relative; left: -165px; top: 295px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logoutButton button:hover {
+    background-color: #83013d;
+  }
