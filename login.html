@@ -11,30 +11,46 @@
 
 </head>
 <body>
-    <section class="bg-yellow-200 min-h-screen flex items-center justify-center">
-        <!-- Log In container -->
-        <div class="bg-white rounded-lg shadow-lg w-full md:w-3/5 lg:w-2/5 p-4 flex flex-col md:flex-row items-center">
-            <!-- Form -->
-            <div class="md:w-1/2 px-4 flex flex-col gap-4">
-                <h2 class="font-bold text-3xl text-yellow-500">Log In</h2>
-                <p class="text-sm mt-3 text-gray-500">Welcome back!</p>
-
-                <form action="" class="flex flex-col gap-5">
-                    <input class="p-2 mt-5 rounded-lg border focus:outline-none focus:ring focus:border-blue-300" type="text" name="email" placeholder="Email">
-                    <input class="p-2 rounded-lg border focus:outline-none focus:ring focus:border-blue-300" type="password" name="password" placeholder="Password">
-
-                    <button class="bg-yellow-500 text-white py-2 mt-4 rounded-lg hover:bg-yellow-600 transition duration-300 focus:outline-none focus:ring focus:border-blue-300">Log In</button>
-                </form>
+    <form id="login-form">
+    <!-- Container -->
+<div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-yellow-200 py-10">
+  
+    <!-- Login component -->
+    <div class="flex shadow-md">
+      <!-- Login form -->
+      <div class="flex flex-wrap content-center justify-center rounded-l-md bg-white" style="width: 24rem; height: 32rem;">
+        <div class="w-72">
+          <!-- Heading -->
+          <h1 class="text-2xl font-bold text-yellow-500 mb-2">Log In</h1>
+          <small class="text-gray-400">Welcome back! Please enter your details</small>
+  
+          <!-- Form -->
+          <form class="mt-4">
+            <div class="mb-5">
+              <label class="mb-2 block text-xs font-semibold">Username</label>
+              <input type="username" placeholder="Enter your username" id="username" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
             </div>
-
-            <!-- Image -->
-            <div class="md:w-1/2 hidden md:block">
-                <img class="rounded-lg mt-4 ml-auto custom-image" 
-                src="pochacco-sanrio.jpg" 
-                alt="Pochacco Image">
+  
+            <div class="mb-5">
+              <label class="mb-2 block text-xs font-semibold">Password</label>
+              <input type="password" placeholder="****" id="password" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
             </div>
+  
+            <div class="mb-3">
+              <button class="mb-1.5 block w-full text-center font-semibold text-white bg-yellow-500 hover:bg-yellow-600 px-2 py-1.5 rounded-md">Sign in</button>
+              
+            </div>
+          </form>
+          
         </div>
-    </section>
+      </div>
+  
+      <!-- Login banner -->
+      <div class="flex flex-wrap content-center justify-center rounded-r-md" style="width: 24rem; height: 32rem;">
+        <img class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md" src="pochacco-sanrio.jpg">
+      </div>
+    </div>
+</form>
 </body>
 </html>
 
@@ -45,7 +61,7 @@
             var password = document.getElementById("password").value;
             event.preventDefault();
     
-            if (username === "nikol" && password === "1234") {
+            if (username === "nikol" && password === "123") {
               location.href = "dashboard.html";
             } else {
               alert("Invalid username or password!");
