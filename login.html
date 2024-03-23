@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Log In</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="login_dash.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+
 </head>
 <body>
     <form id="login-form">
-    <div class="container">
-        
-        <h1>Login</h1>
-        
-        <div class="inputContainer">
-            <i class="material-symbols-rounded">person</i>
-            <input type="text" id="username" name="username" placeholder="Username" required>
+    <!-- Container -->
+    <div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-yellow-200 py-10">
+  
+    <!-- Login component -->
+    <div class="flex shadow-md">
+      <!-- Login form -->
+      <div class="relative h-32 w-32 flex flex-wrap content-center justify-center rounded-l-md bg-white" style="width: 24rem; height: 32rem;">
+        <div class="w-72">
+          <!-- Heading -->
+          <h1 class="absolute inset-x-12 top-10 h-15 pt-7 text-2xl font-bold text-yellow-500 mb-2">Log In</h1>
+          <small class="absolute inset-x-12 top-20 h-15 pt-7 text-gray-400">Welcome back! Please enter your details</small>
+  
+          <!-- Form -->
+          <div class="pt-20">
+          <form class="mb-8">
+            <div class="mb-7">
+              <label class="mb-2 block text-xs font-semibold">Username</label>
+              <input type="username" placeholder="Enter your username" id="username" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
+            </div>
+  
+            <div class="mb-8">
+              <label class="mb-2 block text-xs font-semibold">Password</label>
+              <input type="password" placeholder="****" id="password" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
+            </div>
+  
+            <div class="mb-5">
+              <button class=" mt-10 block w-full text-center font-semibold text-white bg-yellow-500 hover:bg-yellow-600 px-2 py-1.5 rounded-md">Sign in</button>
+              
+            </div>
+          </form>
         </div>
-
-        <div class="inputContainer">
-            <i class="material-symbols-rounded">lock</i>
-            <input type="password" id="password" name="password" placeholder="Password" required>
+          
         </div>
-
-        <div class="loginButton">
-            <button type="submit" id="login" value="Login" onclick="auth()">Login<i class="fas fa-sign-in-alt"></i></button>
-        </div>
+      </div>
+  
+      <!-- Login banner -->
+      <div class="flex flex-wrap content-center justify-center rounded-r-md" style="width: 24rem; height: 32rem;">
+        <img class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md" src="pochacco-sanrio.jpg">
+      </div>
     </div>
-    </form>
+</form>
 </body>
-
-<script>
-    window.onload = function() {
-      document.getElementById("login-form").addEventListener("submit", function(event) {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        event.preventDefault();
-
-        if (username === "nikol" && password === "1234") {
-          location.href = "Dashboard.html";
-        } else {
-          alert("Invalid username or password!");
-        }
-      });
-    };
-  </script>
-
 </html>
+
+    <script>
+        window.onload = function() {
+          document.getElementById("login-form").addEventListener("submit", function(event) {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            event.preventDefault();
+    
+            if (username === "nikol" && password === "123") {
+              location.href = "dashboard.html";
+            } else {
+              alert("Invalid username or password!");
+            }
+          });
+        };
+      </script>
+    
+    </html>
