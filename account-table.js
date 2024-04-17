@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         appendValues(event);
     });
 
-    //Getting Values
     function appendValues(event) {
         const username = document.getElementById("username").value;
         const email = document.getElementById("email").value;
@@ -16,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const row = document.createElement('tr');
 
         row.innerHTML = `
-        <td style="border-right: 2px solid #4b5563; text-align: center;">${++ID}</td>
-        <td style="border-right: 2px solid #4b5563; text-align: center;">${username}</td>
-        <td style="border-right: 2px solid #4b5563; text-align: center;">${email}</td>
-        <td style="border-right: 2px solid #4b5563; text-align: center;">${role}</td>
-        <td style="text-align: center;">
+        <td style="text-align: left; padding-left: 22px;">${++ID}</td>
+        <td style="text-align: left; padding-left: 22px;">${username}</td>
+        <td style="text-align: left; padding-left: 22px;">${email}</td>
+        <td style="text-align: left; padding-left: 22px;">${role}</td>
+        <td style="text-align: left; padding-left: 22px;">
             <button class="edit" style="margin-right: 10px;">
                 <i class="fas fa-edit" style="color: blue;"></i>
             </button>
@@ -29,20 +28,26 @@ document.addEventListener("DOMContentLoaded", function() {
             </button>
         </td>`;
 
-    //Adding Rows
     const tbody = document.querySelector('.table-auto tbody');
     tbody.appendChild(row);
+
+    // Reset the form fields to their default placeholders
+    document.getElementById("username").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("role").value = "";
 
     row.querySelector('.edit').addEventListener('click', editRow);
     row.querySelector('.delete').addEventListener('click', deleteRow);
 
-    row.style.border = '2px solid #4b5563';
-    row.style.borderRight = '2px solid #4b5563';
-
+    //Styles
+    row.style.borderTop = '1px solid #cccccc';
+    const cells = row.querySelectorAll('td');
+    cells.forEach(cell => {
+        cell.style.paddingTop = '25px';
+        cell.style.paddingBottom = '25px';
+    });
     }
 
-
-    //Edit Row
     function editRow(event) {
         const button = event.target.parentNode;
         const row = button.parentNode.parentNode;
@@ -50,17 +55,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const email = row.children[2];
         const role = row.children[3];
 
-        username.innerHTML = <input type="text" id="editUsername" value="${username.textContent}"></input>;
-        email.innerHTML = <input type="text" id="editEmail" value="${email.textContent}"></input>;
-        role.innerHTML = <input type="text" id="editRole" value="${role.textContent}"></input>;
+        username.innerHTML = '<input type="text" id="editUsername" value="' + username.textContent + '"></input>';
+        email.innerHTML = '<input type="text" id="editEmail" value="' + email.textContent + '"></input>';
+        role.innerHTML = '<input type="text" id="editRole" value="' + role.textContent + '"></input>';
 
         button.innerHTML = '<i class="fas fa-save" style="color: green;"></i>';
         button.removeEventListener('click', editRow);
         button.addEventListener('click', saveRow);
-
     }
 
-    //Save Row
     function saveRow(event) {
         const button = event.target.parentNode;
         const row = button.parentNode.parentNode;
@@ -68,16 +71,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const email = row.children[2].querySelector('input');
         const role = row.children[3].querySelector('input');
     
-        username.parentNode.textContent = username.value;
-        email.parentNode.textContent = email.value;
-        role.parentNode.textContent = role.value;
+        username.parentNode.innerHTML = username.value;
+        email.parentNode.innerHTML = email.value;
+        role.parentNode.innerHTML = role.value;
     
         button.innerHTML = '<i class="fas fa-edit" style="color: blue;"></i>';
         button.removeEventListener('click', saveRow);
         button.addEventListener('click', editRow);
     }
 
-    //Delete Row
     function deleteRow(event) {
         const button = event.target.parentNode;
         const row = button.parentNode.parentNode;
